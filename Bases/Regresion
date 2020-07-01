@@ -9,7 +9,7 @@ print(boston.DESCR)
 X = np.array(boston.data[:, 5])
 Y = np.array(boston.target)
 
-plt.scatter(X, Y,alpha=0.3)
+plt.scatter(X, Y, alpha=0.3)
 
 X = np.array([np.ones(506), X]).T
 """creamos una matrix con el array X y le sumamos una array de 1 """
