@@ -16,7 +16,7 @@ for ix, x in enumerate(_x):
     for iy, y in enumerate(_y):
         _z[iy, ix] = function([x, y])
 
-plt.contourf(_x, _y, _z, 100)
+plt.contourf(_x, _y, _z, res)
 plt.colorbar()
 
 zeta = np.random.rand(2) * 4 - 2
@@ -36,7 +36,7 @@ for _ in range(10000):
 
         _t[it] = _t[it] + h
 
-        dv = (func(_t) - func(zeta)) / h
+        dv = (function(_t) - function(zeta)) / h
 
         grad[it] = dv
 
