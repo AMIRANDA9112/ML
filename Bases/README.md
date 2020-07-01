@@ -1,0 +1,1 @@
+###Practica para comprender el descenso del gradiente
