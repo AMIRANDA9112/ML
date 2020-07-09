@@ -1,0 +1,42 @@
+import pygame
+import numpy as np
+
+pygame.init()
+
+width, height = 1000, 1000
+
+screen = pygame.display.set_mode((height, width))
+
+bg = 25, 25, 25
+
+screen.fill(bg)
+
+nxC, nyC = 25, 25
+
+limCW = width / nxC
+limCH = height / nyC
+
+gameState = np.zeros((nxC, nyC))
+
+while True:
+
+    for y in range(0, nxC):
+        for x in range(0, nyC):
+
+            n_neigh = gameState[(x - 1), (y - 1)] + \
+                gameState[(x), (y - 1)] + \
+                gameState[(x + 1), (y - 1)] + \
+                gameState[(x - 1), (y)] + \
+                gameState[(x + 1), (y)] + \
+                gameState[(x - 1), (y + 1)] + \
+                gameState[(x), (y + 1)] + \
+                gameState[(x + 1), (y + 1)]
+
+            poly = [((x) * limCW, y * limCH),
+                    ((x+1) * limCW, y * limCH),
+                    ((x+1) * limCW, y * limCH),
+                    ((x) * limCW, y * limCH)]
+
+
+
+            pygame.draw.polygone(screen, (128, 128, 128), poly, 1)
