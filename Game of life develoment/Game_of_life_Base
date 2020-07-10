@@ -22,9 +22,7 @@ gameState = np.zeros((nxC, nyC))
 posInitX = int((nxC / 2) - 3)
 posInitY = int((nyC / 2) - 5)
 gameState[posInitX, posInitY] = 1
-gameState[posInitX + 1, posInitY] = 1
-gameState[posInitX + 2, posInitY] = 1
-gameState[posInitX + 3, posInitY] = 1
+
 
 pauseExec = True
 
