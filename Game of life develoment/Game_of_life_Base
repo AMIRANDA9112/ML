@@ -1,5 +1,5 @@
 import pygame
-import time, os
+import time
 import numpy as np
 
 pygame.init()
@@ -25,8 +25,6 @@ gameState[posInitX, posInitY] = 1
 gameState[posInitX + 1, posInitY] = 1
 gameState[posInitX + 2, posInitY] = 1
 gameState[posInitX + 3, posInitY] = 1
-
-
 
 pauseExec = True
 
@@ -117,10 +115,6 @@ while not endGame:
 
                     pygame.draw.polygon(screen, (255, 255, 255), poly, 0)
 
-    # Actualizo gameState
     gameState = np.copy(newGameState)
 
-    # Muestro y actualizo los fotogramas en cada iteración del bucle principal
     pygame.display.flip()
-
-print("Juego finalizado - jonatandb@gmail.com")
