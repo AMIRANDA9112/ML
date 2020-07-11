@@ -24,6 +24,7 @@ posInitY = int((nyC / 2) - 5)
 gameState[posInitX, posInitY] = 1
 
 
+
 pauseExec = True
 
 endGame = False

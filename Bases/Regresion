@@ -16,4 +16,5 @@ X = np.array([np.ones(506), X]).T
 B = np.linalg.inv(X.T @ X) @ X.T @ Y
 """formula para minimizar el error cuadratico medio"""
 plt.plot([4, 9], [B[0] + B[1] * 4, B[0] + B[1] * 9], c="red")
+"""plot de linea roja de la funcion de coste calculada"""
 plt.show()
