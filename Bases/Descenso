@@ -42,8 +42,9 @@ for _ in range(10000):
 
     zeta = zeta - lr * grad
 
-    if (_ % 50 == 0):
+    if _ % 50 == 0:
         plt.plot(zeta[0], zeta[1], ".", c="red")
 
 plt.plot(zeta[0], zeta[1], "o", c="green")
+
 plt.show()

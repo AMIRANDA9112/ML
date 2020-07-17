@@ -2,6 +2,12 @@ import pygame
 import time
 import numpy as np
 
+try:
+    import pygame_sdl2
+    pygame_sdl2.import_as_pygame()
+except ImportError:
+    pass
+
 pygame.init()
 
 width, height = 700, 700
